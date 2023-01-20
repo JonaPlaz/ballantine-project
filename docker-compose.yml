@@ -30,8 +30,6 @@ services:
   www:
     build: php
     container_name: www_ballantine
-    depends_on:
-      - redis
     ports:
       - "8081:80"
     volumes:
