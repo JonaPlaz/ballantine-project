@@ -1,0 +1,31 @@
+/* HOME PAGE */
+#home {
+  background-image: url('../images/map_v1.png');
+  height: 100vh;
+  opacity: 90%;
+}
+
+#home_text {
+  display: flex;
+  flex-direction: column;
+}
+
+#home_text>h1 {
+  align-self: center;
+  color: rgb(5, 2, 17);
+  font-size: 110px;
+  margin-top: 280px;
+}
+
+#home_text>button {
+  background-color: rgb(180, 1, 1);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  align-self: center;
+  margin-top: 150px;
+  font-size: 25px;
+  height: 70px;
+  width: 100px;
+  text-transform: uppercase;
+}
