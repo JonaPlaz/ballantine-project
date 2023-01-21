@@ -1,6 +1,7 @@
 /* HOME PAGE */
 #home {
   background-image: url('../images/map_v1.png');
+  background-size: cover;
   height: 100vh;
   opacity: 90%;
 }
