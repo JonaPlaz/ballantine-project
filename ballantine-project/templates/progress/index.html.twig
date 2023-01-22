@@ -7,9 +7,5 @@
 	<div id="progress">
 		<p>{{ explanation.text }}</p>
 	</div>
-
-	<audio controls>
-		<source src="{{ asset('audio/audio_001.mp3') }}" type="audio/mp3">
-		Your browser does not support the audio element.
-	</audio>
+	<audio id="audio" src="{{ asset('audio/audio_001.mp3') }}" autoplay loop></audio>
 {% endblock %}
