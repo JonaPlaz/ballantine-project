@@ -22,15 +22,24 @@ body {
   margin-top: 280px;
 }
 
-#home_text>button {
+#home_text>div {
   background-color: rgb(180, 1, 1);
   border: none;
   border-radius: 5px;
-  color: white;
   align-self: center;
   margin-top: 150px;
+  padding: 10px;
+}
+
+#home_text>div>a {
+  color: white;
+  font-family: 'Liberation Serif', sans-serif;
   font-size: 25px;
-  height: 70px;
-  width: 100px;
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+/* PROGRESS */
+#progress {
+  font-family: 'Liberation Sans', sans-serif;
 }

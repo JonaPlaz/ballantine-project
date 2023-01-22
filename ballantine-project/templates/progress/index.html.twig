@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProgressController!
+{% endblock %}
+
+{% block body %}
+	<div id="progress">
+		<p>{{ explanation.text }}</p>
+	</div>
+	<audio id="audio" src="{{ asset('audio/audio_001.mp3') }}" autoplay loop></audio>
+{% endblock %}
