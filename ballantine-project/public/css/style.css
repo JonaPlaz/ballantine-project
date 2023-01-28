@@ -1,5 +1,14 @@
+:root {
+  --dark-background-color: #402E32;
+  --place-background-color: #FFF7E6;
+  --button-background-color: #C2554F;
+  --text-color-dark-background: #FFEDCB;
+  --body-font-family: 'Liberation Serif', sans-serif;
+  --text-font-family: 'Liberation Sans', sans-serif;
+}
+
 body {
-  font-family: 'Liberation Serif', sans-serif;
+  font-family: var(--body-font-family)
 }
 
 /* HOME PAGE */
@@ -23,7 +32,7 @@ body {
 }
 
 #home_text>div {
-  background-color: rgb(180, 1, 1);
+  background-color: var(--button-background-color);
   border: none;
   border-radius: 5px;
   align-self: center;
@@ -32,14 +41,35 @@ body {
 }
 
 #home_text>div>a {
-  color: white;
-  font-family: 'Liberation Serif', sans-serif;
+  color: var(--text-color-dark-background);
+  font-family: var(--body-font-family);
   font-size: 25px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 /* PROGRESS */
-#progress {
-  font-family: 'Liberation Sans', sans-serif;
+#progressText {
+  background-color: var(--dark-background-color);
+  color: var(--text-color-dark-background);
+  font-family: var(--text-font-family);
+  height: 30vh;
+  line-height: 1.5em;
+  padding: 10px;
+  text-align: justify;
+}
+
+#progressPlace {
+  background-color: var(--place-background-color);
+  height: 70vh;
+}
+
+#continue {
+  background-color: var(--button-background-color);
+  border: none;
+  color: var(--text-color-dark-background);
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+  text-transform: uppercase;
 }

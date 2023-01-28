@@ -19,7 +19,6 @@ class ProgressController extends AbstractController
   #[Route('/progress/{id}', name: 'app_progress')]
   public function index(ManagerRegistry $doctrine, $id): Response
   {
-
     $answer = $doctrine->getRepository(Answer::class)->findAll();
     $explanation = $doctrine->getRepository(Explanation::class)->findAll();
     $name = $doctrine->getRepository(Name::class)->findAll();

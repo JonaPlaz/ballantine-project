@@ -5,9 +5,14 @@
 
 {% block body %}
 	<div
-		id="progress">{# <p>{{ explanation[1].text }}</p> #}
+		id="progressText">
 	</div>
-	<audio id="audio" src="{{ asset('audio/audio_001.mp3') }}" autoplay loop></audio>
+
+  	<div
+		id="progressPlace">
+	</div>
+	<audio id="audio1" src="{{ asset(explanation[0].audio.link ~ '.mp3') }}" autoplay loop></audio>
+	<audio id="audio2" src="{{ asset(explanation[1].audio.link ~ '.mp3') }}" loop></audio>
 
 	<script id="answer" type="application/json">
 		{{ answer_json }}
