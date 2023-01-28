@@ -4,8 +4,24 @@
 {% endblock %}
 
 {% block body %}
-	<div id="progress">
-		<p>{{ explanation.text }}</p>
+	<div
+		id="progress">{# <p>{{ explanation[1].text }}</p> #}
 	</div>
 	<audio id="audio" src="{{ asset('audio/audio_001.mp3') }}" autoplay loop></audio>
+
+	<script id="answer" type="application/json">
+		{{ answer_json }}
+	</script>
+
+	<script id="explanation" type="application/json">
+		{{ explanation_json }}
+	</script>
+
+	<script id="name" type="application/json">
+		{{ name_json }}
+	</script>
+
+	<script id="question" type="application/json">
+		{{ question_json }}
+	</script>
 {% endblock %}

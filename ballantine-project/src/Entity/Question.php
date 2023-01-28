@@ -25,7 +25,7 @@ class Question
     #[ORM\ManyToOne(inversedBy: 'questions')]
     private ?Hero $hero = null;
 
-    #[ORM\OneToMany(mappedBy: 'questions', targetEntity: Answer::class)]
+    #[ORM\OneToMany(mappedBy: 'question', targetEntity: Answer::class)]
     private Collection $answers;
 
     public function __construct()
