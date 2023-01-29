@@ -20,9 +20,12 @@ const app = {
       audio1.play();
     });
 
-    const explanationDiv = document.createElement("div");
     const answerDiv = document.createElement("div");
+    answerDiv.setAttribute("id", "answer");
 
+    const questionDiv = document.createElement("div");
+
+    const explanationDiv = document.createElement("div");
     explanationDiv.textContent = explanation[0].text;
     progressTextDiv.appendChild(explanationDiv);
 
@@ -32,7 +35,6 @@ const app = {
     progressTextDiv.appendChild(continueButton);
 
     let clickCounter = 0;
-
     continueButton.addEventListener("click", function () {
       clickCounter++;
       if (clickCounter === 1) {
@@ -46,8 +48,44 @@ const app = {
       } else if (clickCounter === 3) {
         explanationDiv.remove();
         continueButton.remove();
-        answerDiv.textContent = answer[0].text;
         progressTextDiv.appendChild(answerDiv);
+        let answerSubDiv = document.createElement("div");
+        answerSubDiv.textContent = answer[0].text;
+        answerDiv.appendChild(answerSubDiv);
+      }
+    });
+
+    answerDiv.addEventListener("click", function () {
+      clickCounter++;
+      progressTextDiv.appendChild(questionDiv);
+      if (clickCounter === 1) {
+        questionDiv.textContent = question[1].text;
+        Object.entries(question[1].answers).map((answer) => {
+          let answerSubDiv = document.createElement("div");
+          answerSubDiv.textContent = answer[1].text;
+          answerDiv.appendChild(answerSubDiv);
+        });
+      } else if (clickCounter === 2) {
+        questionDiv.textContent = question[2].text;
+        Object.entries(question[2].answers).map((answer) => {
+          let answerSubDiv = document.createElement("div");
+          answerSubDiv.textContent = answer[1].text;
+          answerDiv.appendChild(answerSubDiv);
+        });
+      } else if (clickCounter === 3) {
+        questionDiv.textContent = question[3].text;
+        Object.entries(question[3].answers).map((answer) => {
+          let answerSubDiv = document.createElement("div");
+          answerSubDiv.textContent = answer[1].text;
+          answerDiv.appendChild(answerSubDiv);
+        });
+      } else if (clickCounter === 4) {
+        questionDiv.textContent = question[4].text;
+        Object.entries(question[4].answers).map((answer) => {
+          let answerSubDiv = document.createElement("div");
+          answerSubDiv.textContent = answer[1].text;
+          answerDiv.appendChild(answerSubDiv);
+        });
       }
     });
   },

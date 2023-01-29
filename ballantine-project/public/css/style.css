@@ -1,4 +1,6 @@
 :root {
+  --answer-background-color: #C38400;
+  --text-color-answer-background: #FFF8EE;
   --dark-background-color: #402E32;
   --place-background-color: #FFF7E6;
   --button-background-color: #C2554F;
@@ -62,6 +64,15 @@ body {
 #progressPlace {
   background-color: var(--place-background-color);
   height: 70vh;
+}
+
+#answer {
+  background-color: var(--answer-background-color);
+  color: var(--text-color-answer-background);
+  cursor: pointer;
+  max-width: fit-content;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 #continue {
