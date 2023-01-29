@@ -54,34 +54,42 @@ const app = {
         answerDiv.appendChild(answerSubDiv);
       }
     });
-
+    let clickAnswerCounter = 0;
     answerDiv.addEventListener("click", function () {
-      clickCounter++;
+      clickAnswerCounter++;
       progressTextDiv.appendChild(questionDiv);
-      if (clickCounter === 1) {
+      if (clickAnswerCounter === 1) {
         questionDiv.textContent = question[1].text;
         Object.entries(question[1].answers).map((answer) => {
           let answerSubDiv = document.createElement("div");
           answerSubDiv.textContent = answer[1].text;
           answerDiv.appendChild(answerSubDiv);
         });
-      } else if (clickCounter === 2) {
+      } else if (clickAnswerCounter === 2) {
         questionDiv.textContent = question[2].text;
         Object.entries(question[2].answers).map((answer) => {
           let answerSubDiv = document.createElement("div");
           answerSubDiv.textContent = answer[1].text;
           answerDiv.appendChild(answerSubDiv);
         });
-      } else if (clickCounter === 3) {
+      } else if (clickAnswerCounter === 3) {
         questionDiv.textContent = question[3].text;
+        console.log("question : ", question[3].text);
         Object.entries(question[3].answers).map((answer) => {
           let answerSubDiv = document.createElement("div");
           answerSubDiv.textContent = answer[1].text;
           answerDiv.appendChild(answerSubDiv);
         });
-      } else if (clickCounter === 4) {
+      } else if (clickAnswerCounter === 4) {
         questionDiv.textContent = question[4].text;
         Object.entries(question[4].answers).map((answer) => {
+          let answerSubDiv = document.createElement("div");
+          answerSubDiv.textContent = answer[1].text;
+          answerDiv.appendChild(answerSubDiv);
+        });
+      } else if (clickAnswerCounter === 5) {
+        questionDiv.textContent = question[5].text;
+        Object.entries(question[5].answers).map((answer) => {
           let answerSubDiv = document.createElement("div");
           answerSubDiv.textContent = answer[1].text;
           answerDiv.appendChild(answerSubDiv);
