@@ -38,7 +38,6 @@ class ProgressController extends AbstractController
     $explanationJson = $serializer->serialize($explanation, 'json');
     $nameJson = $serializer->serialize($name, 'json');
     $questionJson = $serializer->serialize($question, 'json');
-    //dd($answerJson);
 
     return $this->render('progress/index.html.twig', [
       'answer' => $answer,
