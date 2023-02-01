@@ -46,6 +46,7 @@ const app = {
         audio1.play();
         explanationDiv.textContent = explanation[2].text;
       } else if (clickCounter === 3) {
+        explanationDiv.textContent = explanation[3].text;
         explanationDiv.remove();
         continueButton.remove();
         progressTextDiv.appendChild(answerDiv);
