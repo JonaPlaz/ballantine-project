@@ -1,5 +1,7 @@
 // AUDIO
 import { audio } from "../audio/audio";
+
+// BUTTON CONTINUE
 import { button } from "../button/button";
 
 export const explanation = {
@@ -13,9 +15,10 @@ export const explanation = {
     const explanation = JSON.parse(explanationJson.innerHTML.replace(/&quot;/g, '"').replace(/&#039;/g, "'"));
 
     // si le selecteur p n'existe pas, on le place en tant qu'enfant de progressTextDiv
-    const paragraph = document.querySelector("#progressText>p");
+    const paragraph = document.querySelector("#explanation_paragraph");
     if (paragraph === null) {
       const explanationParagraph = document.createElement("p");
+      explanationParagraph.setAttribute("id", "explanation_paragraph");
       progressTextDiv.appendChild(explanationParagraph);
       explanationParagraph.textContent = explanation[index].text;
     } else {
