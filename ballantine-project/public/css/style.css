@@ -1,10 +1,10 @@
 :root {
   --answer-background-color: #C38400;
   --text-color-answer-background: #FFF8EE;
-  --dark-background-color: #402E32;
+  --dark-background-color: black;
   --place-background-color: #FFF7E6;
   --button-background-color: #C2554F;
-  --text-color-dark-background: #FFEDCB;
+  --text-color-dark-background: white;
   --body-font-family: 'Liberation Serif', sans-serif;
   --text-font-family: 'Liberation Sans', sans-serif;
 }
@@ -51,19 +51,36 @@ body {
 }
 
 /* PROGRESS */
-#progressText {
+#progress {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  height: 800px;
+  width: 1200px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+#progress_character {
+  border: 1px solid black;
+  width: 20vw;
+}
+
+#progress_place {
+  background-image: url('../images/illustration_1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 60vw;
+}
+
+#progress_text {
   background-color: var(--dark-background-color);
   color: var(--text-color-dark-background);
   font-family: var(--text-font-family);
-  height: 30vh;
   line-height: 1.5em;
   padding: 10px;
   text-align: justify;
-}
-
-#progressPlace {
-  background-color: var(--place-background-color);
-  height: 70vh;
+  width: 20vw;
 }
 
 #answer {

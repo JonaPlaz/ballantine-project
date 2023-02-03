@@ -4,9 +4,11 @@
 {% endblock %}
 
 {% block body %}
-	<div id="progressText"></div>
-
-	<div id="progressPlace"></div>
+	<div id="progress">
+		<div id="progress_character"></div>
+		<div id="progress_place"></div>
+		<div id="progress_text"></div>
+	</div>
 
 	<audio id="audio1" src="{{ asset(explanation[0].audio.link ~ '.mp3') }}" autoplay loop></audio>
 	<audio id="audio2" src="{{ asset(explanation[1].audio.link ~ '.mp3') }}" loop></audio>

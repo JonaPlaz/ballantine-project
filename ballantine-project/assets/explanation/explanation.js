@@ -6,7 +6,7 @@ import { button } from "../button/button";
 
 export const explanation = {
   // Recupérer une explanation en bdd via son id et créer un paragraphe.
-  createExplanation: (progressTextDiv, id) => {
+  createExplanation: (progressDiv, progressTextDiv, id) => {
     // index représente l'index du tableau des explanation, donc l'id de l'object appelé - 1
     const index = id - 1;
 
@@ -27,7 +27,7 @@ export const explanation = {
     }
 
     // création du bouton continue
-    button.createButton(progressTextDiv);
+    button.createButton(progressDiv);
 
     // activer audio correspondant au texte explanation
     const audioId = explanation[index].audio.id;

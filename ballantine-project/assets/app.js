@@ -6,11 +6,12 @@ import { dialog } from "./dialog/dialog";
 
 const app = {
   init: () => {
-    const progressTextDiv = document.querySelector("#progressText");
+    const progressDiv = document.querySelector("#progress");
+    const progressTextDiv = document.querySelector("#progress_text");
 
     // L'histoire commence par 4 textes à faire avancer avec un click
     let clickButtonExplanation = 1;
-    explanation.createExplanation(progressTextDiv, clickButtonExplanation);
+    explanation.createExplanation(progressDiv, progressTextDiv, clickButtonExplanation);
 
     // On prépare l'affichage de la première question
     let questionNumber = 1;
@@ -19,11 +20,11 @@ const app = {
     const handleClickButtonExplanation = () => {
       clickButtonExplanation++;
       if (clickButtonExplanation === 2) {
-        explanation.createExplanation(progressTextDiv, clickButtonExplanation);
+        explanation.createExplanation(progressDiv, progressTextDiv, clickButtonExplanation);
       } else if (clickButtonExplanation === 3) {
-        explanation.createExplanation(progressTextDiv, clickButtonExplanation);
+        explanation.createExplanation(progressDiv, progressTextDiv, clickButtonExplanation);
       } else if (clickButtonExplanation === 4) {
-        explanation.createExplanation(progressTextDiv, clickButtonExplanation);
+        explanation.createExplanation(progressDiv, progressTextDiv, clickButtonExplanation);
       } else if (clickButtonExplanation === 5) {
         // quand les textes d'intro sont passés on supprime le paragraphe et le bouton pour laisser place au dialogue.
         continueButton.remove();
