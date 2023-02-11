@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
     ports:
-      - 8081:80
+      - 8083:80
     environment:
       PMA_HOST: db
     networks:
