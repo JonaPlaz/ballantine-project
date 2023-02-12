@@ -1,6 +1,6 @@
 /* HOME PAGE */
 #home {
-  background-image: url('../images/map_v1.png');
+  background-image: url('../images/home/map_v1.png');
   height: 100vh;
   opacity: 90%;
 }
@@ -28,4 +28,13 @@
   height: 70px;
   width: 100px;
   text-transform: uppercase;
+}
+
+/* STAGE */
+#frame {
+  background-color: black;
+  border: 1px solid white;
+  margin: 5vh auto;
+  height: 80vh;
+  width: 80vw;
 }

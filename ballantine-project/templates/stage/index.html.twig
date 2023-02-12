@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Etape :
+	{{ stage.id }}
+{% endblock %}
+
+{% block body %}
+
+<div id="frame">
+</div>
+
+	<script id="stage" type="application/json">
+		{{ stage_json }}
+	</script>
+
+{% endblock %}

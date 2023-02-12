@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\RankRepository;
+use App\Repository\RankStageRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: RankRepository::class)]
+#[ORM\Entity(repositoryClass: RankStageRepository::class)]
 class RankStage
 {
     #[ORM\Id]
