@@ -17,16 +17,16 @@
   margin-top: 280px;
 }
 
-#home_text>button {
-  background-color: rgb(180, 1, 1);
-  border: none;
-  border-radius: 5px;
-  color: white;
+#home_text>div {
   align-self: center;
   margin-top: 150px;
-  font-size: 25px;
-  height: 70px;
-  width: 100px;
+}
+
+#home_text>div>a {
+  color: rgb(43, 16, 87);
+  font-size: 50px;
+  font-weight: bolder;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -35,6 +35,34 @@
   background-color: black;
   border: 1px solid white;
   margin: 5vh auto;
-  height: 80vh;
+  height: 90vh;
   width: 80vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#inventory {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+  width: 15%;
+}
+
+#office_beaulieu_001 {
+  background-image: url('../images/stage/office_beaulieu_001.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 60%;
+}
+
+#text_area {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+  width: 25%;
 }
