@@ -1,11 +1,10 @@
 export const atmosphere = {
-  getAtmosphere: (element) => {
-    const frame = document.querySelector("#frame");
+  getAtmosphere: (element, frame) => {
     const atmosphereName = element.atmosphere.name;
     switch (atmosphereName) {
       case "black":
         const textAreaCenter = document.createElement('div');
-        textAreaCenter.setAttribute('id', 'textArea');
+        textAreaCenter.setAttribute('id', 'text_area');
         frame.appendChild(textAreaCenter);
         break;
       case "office_beaulieu_001":

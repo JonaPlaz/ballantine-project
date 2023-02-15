@@ -1,14 +1,45 @@
 export const text = {
-  getTexts: (element, frame) => {
-    // boucler sur les texts et séparer en fonction des categoryText
-    // boucler sur les texts pour les passer un par un au click sur le text ou bouton ou réponse
-    const categoryText = null;
-    switch (categoryText) {
-      case "":
+  getTexts: (element, checkCompletion) => {
+    const textArea = document.querySelector("#text_area");
+    const continueButton = document.createElement("button");
+    continueButton.setAttribute("id", "continue_button");
+    continueButton.textContent = "continue...";
+    textArea.appendChild(continueButton);
 
-        break;
-      case "":
-        break;
-    }
+    let currentTextIndex = 0;
+
+    const displayText = (currentText) => {
+      const textDiv = document.querySelector("#text");
+      if (textDiv === null) {
+        const textCurrentDiv = document.createElement("div");
+        textCurrentDiv.setAttribute("id", "text");
+        textCurrentDiv.textContent = currentText.text;
+        textArea.appendChild(textCurrentDiv);
+      } else {
+        textDiv.textContent = currentText.text;
+      }
+
+      switch (currentText.categoryText.name) {
+        case "narrative":
+        case "hero solo":
+        case "discussion":
+        case "information":
+          break;
+        default:
+          console.warn(`Unknown category: ${currentText.categoryText.name}`);
+      }
+    };
+
+    displayText(element.texts[currentTextIndex]);
+
+    continueButton.addEventListener("click", () => {
+      currentTextIndex++;
+      if (currentTextIndex >= element.texts.length) {
+        console.log("End of text");
+        checkCompletion();
+        return;
+      }
+      displayText(element.texts[currentTextIndex]);
+    });
   },
 };
