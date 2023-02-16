@@ -4,7 +4,7 @@ export const atmosphere = {
     switch (atmosphereName) {
       case "black":
         const textAreaCenter = document.createElement('div');
-        textAreaCenter.setAttribute('id', 'text_area');
+        textAreaCenter.setAttribute('id', 'text_area_center');
         frame.appendChild(textAreaCenter);
         break;
       case "office_beaulieu_001":
@@ -17,7 +17,7 @@ export const atmosphere = {
         frame.appendChild(officeBeaulieuOne);
 
         const textAreaRight = document.createElement('div');
-        textAreaRight.setAttribute('id', 'text_area');
+        textAreaRight.setAttribute('id', 'text_area_right');
         frame.appendChild(textAreaRight);
         break;
     }
