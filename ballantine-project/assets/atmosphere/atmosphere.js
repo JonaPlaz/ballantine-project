@@ -8,19 +8,26 @@ export const atmosphere = {
         frame.appendChild(textAreaCenter);
         break;
       case "office_beaulieu_001":
-      case "office_beaulieu_002":
         const officeBeaulieuOne = document.createElement("div");
         officeBeaulieuOne.setAttribute("id", "office_beaulieu_001");
         frame.appendChild(officeBeaulieuOne);
 
-        const textAreaRight = document.createElement("div");
-        textAreaRight.setAttribute("id", "text_area_right");
-        frame.appendChild(textAreaRight);
+        const textAreaRightOne = document.createElement("div");
+        textAreaRightOne.setAttribute("id", "text_area_right");
+        frame.appendChild(textAreaRightOne);
         break;
       case "office_beaulieu_002":
         const inventory = document.createElement("div");
         inventory.setAttribute("id", "inventory");
         frame.appendChild(inventory);
+
+        const officeBeaulieuTwo = document.createElement("div");
+        officeBeaulieuTwo.setAttribute("id", "office_beaulieu_002");
+        frame.appendChild(officeBeaulieuTwo);
+
+        const textAreaRightTwo = document.createElement("div");
+        textAreaRightTwo.setAttribute("id", "text_area_right");
+        frame.appendChild(textAreaRightTwo);
         break;
     }
   },

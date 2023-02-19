@@ -73,7 +73,13 @@ body {
   background: url('../images/stage/office_beaulieu_001.png') no-repeat center center/cover;
 }
 
-#text_area_center, #text_area_right {
+#office_beaulieu_002 {
+  width: 60%;
+  background: url('../images/stage/office_beaulieu_002.png') no-repeat center center/cover;
+}
+
+#text_area_center,
+#text_area_right {
   width: 25%;
   margin: 15px;
   padding: 15px;
@@ -90,7 +96,9 @@ body {
   width: 100%;
 }
 
-#text, #answer, #character {
+#text,
+#answer,
+#character {
   color: var(--text-color);
   letter-spacing: 1.5px;
   line-height: 1.4rem;
