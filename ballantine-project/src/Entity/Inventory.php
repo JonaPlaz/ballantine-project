@@ -24,6 +24,9 @@ class Inventory
     #[ORM\OneToMany(mappedBy: 'inventory', targetEntity: CategoryItem::class)]
     private Collection $categoryItems;
 
+    #[ORM\OneToOne(inversedBy: 'inventory', cascade: ['persist', 'remove'])]
+    private ?Backpack $backpack = null;
+
     public function __construct()
     {
         $this->categoryItems = new ArrayCollection();
@@ -94,6 +97,18 @@ class Inventory
                 $categoryItem->setInventory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getBackpack(): ?Backpack
+    {
+        return $this->backpack;
+    }
+
+    public function setBackpack(?Backpack $backpack): self
+    {
+        $this->backpack = $backpack;
 
         return $this;
     }

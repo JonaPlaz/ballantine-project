@@ -1,102 +1,122 @@
-/* HOME PAGE */
+/* Base Styles */
+
+:root {
+  --font-family: Cambria;
+  --background-color: #000;
+  --border-color: #fff;
+  --text-color: #fff;
+  --link-color: #fff;
+  --button-background-color: #BF9A83;
+  --button-text-color: #fff;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Home Page Styles */
+
 #home {
   background-image: url('../images/home/map_v1.png');
   height: 100vh;
-  opacity: 90%;
+  opacity: 0.9;
 }
 
 #home_text {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#home_text>h1 {
-  align-self: center;
-  color: rgb(5, 2, 17);
+#home_text h1 {
+  color: #050211;
   font-size: 110px;
-  margin-top: 280px;
+  margin: 200px 0;
 }
 
-#home_text>div {
-  align-self: center;
-  margin-top: 150px;
-}
-
-#home_text>div>a {
-  color: rgb(43, 16, 87);
+#home_text a {
+  background-color: var(--button-background-color);
+  border-radius: 5px;
+  color: var(--link-color);
   font-size: 50px;
-  font-weight: bolder;
+  font-weight: bold;
+  padding: 7px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-/* STAGE */
-#frame {
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 10px;
-  margin: 5vh auto;
-  height: 90vh;
-  width: 80vw;
+/* Stage Styles */
 
+#frame {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80vw;
+  height: 90vh;
+  margin: 5vh auto;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--background-color);
 }
 
 #inventory {
-  border: 1px solid white;
-  border-radius: 10px;
+  width: 15%;
   margin: 15px;
   padding: 15px;
-  width: 15%;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
 }
 
 #office_beaulieu_001 {
-  background-image: url('../images/stage/office_beaulieu_001.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-
   width: 60%;
+  background: url('../images/stage/office_beaulieu_001.png') no-repeat center center/cover;
+}
+
+#text_area_center, #text_area_right {
+  width: 25%;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 
 #text_area_center {
   border: none;
-  margin: 15px;
-  padding: 15px;
+  align-self: center;
   width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-self: center;
-  text-align: justify;
 }
 
-#text_area_right {
-  border: 1px solid white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 15px;
-  width: 25%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-self: center;
-  text-align: justify;
-}
-
-#text {
-  color: white;
+#text, #answer, #character {
+  color: var(--text-color);
   letter-spacing: 1.5px;
- line-height: 1.4rem;
+  line-height: 1.4rem;
+}
 
+#answer {
+  margin-top: 10px;
+}
+
+.answerText {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 10px;
 }
 
 #continue_button {
-  background-color: #BF9A83;
+  background-color: var(--button-background-color);
   border: none;
   border-radius: 4px;
-  color: white;
+  color: var(--button-text-color);
   cursor: pointer;
+  font-size: 13px;
   margin-top: 15px;
   padding: 5px;
-  width: 80px;
+  text-transform: uppercase;
+  width: 100px;
 }
