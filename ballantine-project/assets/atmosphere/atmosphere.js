@@ -17,9 +17,29 @@ export const atmosphere = {
         frame.appendChild(textAreaRightOne);
         break;
       case "office_beaulieu_002":
-        const inventory = document.createElement("div");
-        inventory.setAttribute("id", "inventory");
-        frame.appendChild(inventory);
+        const backpack = document.createElement("div");
+        backpack.setAttribute("id", "backpack_left");
+        frame.appendChild(backpack);
+
+        const inventory = document.createElement('div');
+        inventory.setAttribute('id', 'inventory')
+        backpack.appendChild(inventory);
+
+        const inventoryTitle = document.createElement('i');
+        inventoryTitle.setAttribute('class', 'backpack_title')
+        inventoryTitle.textContent = 'inventaire';
+        inventory.appendChild(inventoryTitle);
+
+        
+
+        const map = document.createElement('div');
+        map.setAttribute('id', 'map')
+        backpack.appendChild(map);
+
+        const mapTitle = document.createElement('h2');
+        mapTitle.setAttribute('class', 'backpack_title')
+        mapTitle.textContent = 'cartes';
+        map.appendChild(mapTitle);
 
         const officeBeaulieuTwo = document.createElement("div");
         officeBeaulieuTwo.setAttribute("id", "office_beaulieu_002");

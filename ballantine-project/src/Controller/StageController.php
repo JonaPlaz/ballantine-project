@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Backpack;
 use App\Entity\Stage;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,6 +19,8 @@ class StageController extends AbstractController
   {
     $stage = $doctrine->getRepository(Stage::class)->find($id);
 
+    $backpack = $doctrine->getRepository(Backpack::class)->findAll();
+
     $encoders = [new JsonEncoder()];
     $normalizers = [new ObjectNormalizer(null, null, null, null, null, null, [
       'circular_reference_handler' => function ($object) {
@@ -30,9 +33,16 @@ class StageController extends AbstractController
       'json_encode_options' => JSON_UNESCAPED_UNICODE
     ]);
 
+    $backpackJson = $serializer->serialize($backpack, 'json', [
+      'json_encode_options' => JSON_UNESCAPED_UNICODE
+    ]);
+
+
+
     return $this->render('stage/index.html.twig', [
       'stage' => $stage,
       'stage_json' => $stageJson,
+      'backpack_json' => $backpackJson
     ]);
   }
 }
